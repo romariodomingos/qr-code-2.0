@@ -1,16 +1,26 @@
+// Função para gerar QR Code
 function generateQRCode() {
-  const data = document.getElementById("data").value;
-  const qrCodeContainer = document.getElementById("qrcode");
-  
-  qrCodeContainer.innerHTML = ""; // Limpa QR Code anterior
-  new QRCode(qrCodeContainer, data);
+    const data = document.getElementById("data").value.trim();
+    const qrCodeContainer = document.getElementById("qrcode");
+
+    if (data === "") {
+      alert("Por favor, insira algum texto para gerar o QR Code.");
+      return;
+    }
+
+    qrCodeContainer.innerHTML = ""; // Limpa QR Code anterior
+
+    // Cria o QR Code com cores padrão
+    new QRCode(qrCodeContainer, {
+      text: data,
+      // colorDark: "#F2f2f2",  // Azul escuro
+      // colorLight: "#5E9FF2", // Azul claro
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    // Exibe o texto indicando sucesso
+document.getElementById("textCode").style.display = "block";
 }
 
-    // Seleciona os elementos
-const botao = document.getElementById('botao');
-const textocument.getElementById('paragrafo');
-
-    // Adiciona o evento de clique ao botão
-botao.addEventListener('click', () => {
-    // Muda o estilo do parágrafo para que ele apareça
-textCode.style.display = 'block'; });
+  // Adiciona o evento de clique ao botão
+document.getElementById("botao").addEventListener("click", generateQRCode);

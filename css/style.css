@@ -46,6 +46,10 @@ div {
     margin: 0px 0;
 }
 
+#textCode {
+    display: none;
+}
+
 div > p {
     color: black;
 }
@@ -93,7 +97,7 @@ footer {
     bottom: 0;
     background-color: #f4f4f4;
     text-align: center;
-    padding: 5px;
+    padding: 3px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
