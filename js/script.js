@@ -1,26 +1,38 @@
-// Função para gerar QR Code
 function generateQRCode() {
     const data = document.getElementById("data").value.trim();
     const qrCodeContainer = document.getElementById("qrcode");
+    const downloadLink = document.getElementById("download");
 
     if (data === "") {
-      alert("Please Enter Some Text to Generate The QR Code.");
+      alert("Por favor, insira algum texto para gerar o QR Code.");
       return;
     }
 
     qrCodeContainer.innerHTML = ""; // Limpa QR Code anterior
 
     // Cria o QR Code com cores padrão
-    new QRCode(qrCodeContainer, {
+    const qrCode = new QRCode(qrCodeContainer, {
       text: data,
-      // colorDark: "#F2f2f2",  // Azul escuro
-      // colorLight: "#5E9FF2", // Azul claro
+      // colorDark: "#2E83F2",  // Cor escura do QR Code
+      // colorLight: "#F2F2F2", // Cor de fundo do QR Code
       correctLevel: QRCode.CorrectLevel.H
     });
 
+    // Aguarda o QR Code ser renderizado antes de gerar o link de download
+    setTimeout(() => {
+      // Localiza o elemento <canvas> dentro do contêiner
+      const canvas = qrCodeContainer.querySelector("canvas");
+      if (canvas) {
+        // Ajustando a imagem gerada para o tamanho e resolução desejada
+        const dataURL = canvas.toDataURL("image/png"); // Converte para URL da imagem
+        downloadLink.href = dataURL; // Define o href para o Data URL
+        downloadLink.style.display = "inline-block"; // Mostra o botão de download
+      }
+    }, 100); // Pequeno atraso para garantir que o QR Code foi renderizado
+
     // Exibe o texto indicando sucesso
-document.getElementById("textCode").style.display = "block";
-}
+    document.getElementById("textCode").style.display = "block";
+  }
 
   // Adiciona o evento de clique ao botão
-document.getElementById("botao").addEventListener("click", generateQRCode);
+  document.getElementById("botao").addEventListener("click", generateQRCode);

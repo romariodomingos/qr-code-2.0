@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body { 
+body {
     font-family: 'Outfit', sans-serif;
-    background-color: #d6e2f0;
+    background-color: #A2C5F2;
     font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding-bottom: 0px; /* Espaço para o footer */
+    padding-bottom: 0; /* Avoid extra space for footer */
 }
 
 div {
@@ -41,9 +41,9 @@ div {
 }
 
 .form-text-qr {
-    color: #45a049;
+    color: #2E83F2;
     text-align: center;
-    margin: 0px 0;
+    margin: 0;
 }
 
 #textCode {
@@ -53,6 +53,7 @@ div {
 div > p {
     color: black;
 }
+
 
 #qrcode {
     margin-top: 20px;
@@ -71,23 +72,24 @@ input {
 }
 
 input:focus {
-    border-color: #4CAF50;
+    border-color: #2E83F2;
     outline: none;
 }
 
 button {
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color:  #2E83F2;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #5E9FF2;
     transform: scale(1.05);
 }
 
@@ -101,13 +103,13 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer .attribution { 
-    font-size: 13px; 
+footer .attribution {
+    font-size: 13px;
     color: #68778d;
 }
 
-footer .attribution a { 
-    color: hsl(228, 45%, 44%); 
+footer .attribution a {
+    color: hsl(228, 45%, 44%);
     text-decoration: none;
 }
 
@@ -115,10 +117,14 @@ footer .attribution a:hover {
     text-decoration: underline;
 }
 
+footer :hover {
+    text-decoration: none;
+}
+
 /* Responsividade */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .form-qr-code {
-        width: 300px;
+        width: 80%;
         height: auto;
         padding: 10px;
     }
@@ -132,4 +138,17 @@ footer .attribution a:hover {
     }
 }
 
-  
+@media (max-width: 400px) {
+    .form-qr-code {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-text-qr {
+        font-size: 12px;
+    }
+
+    img {
+        width: 200px;
+    }
+}
