@@ -6,9 +6,11 @@ function generateQRCode() {
   new QRCode(qrCodeContainer, data);
 }
 
+    // Seleciona os elementos
+const botao = document.getElementById('botao');
+const textocument.getElementById('paragrafo');
 
-function text( generateQRCode ){
-  var textC = document.getElementById("textCode").value;
-
-  textC.innerHTML = "Your QR Code Was Generated Successfully!";
-}
+    // Adiciona o evento de clique ao botão
+botao.addEventListener('click', () => {
+    // Muda o estilo do parágrafo para que ele apareça
+textCode.style.display = 'block'; });
