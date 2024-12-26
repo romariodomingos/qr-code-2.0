@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding-bottom: 70px; /* Espaço para o footer */
+    padding-bottom: 0px; /* Espaço para o footer */
 }
 
 div {
@@ -93,7 +93,7 @@ footer {
     bottom: 0;
     background-color: #f4f4f4;
     text-align: center;
-    padding: 7px 0;
+    padding: 5px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
