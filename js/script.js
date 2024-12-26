@@ -4,7 +4,7 @@ function generateQRCode() {
     const qrCodeContainer = document.getElementById("qrcode");
 
     if (data === "") {
-      alert("Por favor, insira algum texto para gerar o QR Code.");
+      alert("Please Enter Some Text to Generate The QR Code.");
       return;
     }
 
