@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Outfit', sans-serif;
+    background-color: #d6e2f0;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-bottom: 70px; /* Espaço para o footer */
+}
+
+div {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.form-qr-code {
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 650px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.37);
+}
+
+.form-qr {
+    width: 250px;
+}
+
+.form-text-qr {
+    color: #45a049;
+    text-align: center;
+    margin: 0px 0;
+}
+
+div > p {
+    color: black;
+}
+
+#qrcode {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    width: 90%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 7px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .attribution { 
+    font-size: 13px; 
+    color: #68778d;
+}
+
+footer .attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+footer .attribution a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .form-qr-code {
+        width: 300px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .form-text-qr {
+        font-size: 14px;
+    }
+
+    img {
+        width: 250px;
+    }
+}
+
+  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Creator QR Code</title>
+  
+</head>
+<body>
+
+    <h1>QR Code Generator</h1>
+
+    <div class="form-qr-code">
+
+        <div id="qrcode" class="form-qr"></div>
+
+        <div class="form-text-qr">
+            <h2 id="textCode">Your QR Code Was Generated Successfully!</h2><br>
+            <p>Scan the QR code to access your Link.</p>
+        </div>
+        
+        <input type="text" id="data" placeholder="  Enter The Code">
+        <button onclick="generateQRCode()"> Create QR Code</button>
+    </div>
+
+    <footer>
+
+        <section class="attribution">
+          <p>Coded by: <a href="https://github.com/romariodomingos" rel="external"><strong>Romário Domingos</a></strong></p>
+        </section>
+    
+      </footer>
+
+</body>
+</html>
