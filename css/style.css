@@ -9,6 +9,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #A2C5F2;
+    color: #68778d;
     font-size: 1em;
     display: flex;
     flex-direction: column;
@@ -136,7 +137,7 @@ footer :hover {
 /* Responsividade */
 @media (max-width: 768px) {
     .form-qr-code {
-        width: 80%;
+        width: 300px;
         height: auto;
         padding: 10px;
     }
@@ -147,20 +148,5 @@ footer :hover {
 
     img {
         width: 250px;
-    }
-}
-
-@media (max-width: 400px) {
-    .form-qr-code {
-        width: 100%;
-        height: auto;
-    }
-
-    .form-text-qr {
-        font-size: 12px;
-    }
-
-    img {
-        width: 200px;
     }
 }
