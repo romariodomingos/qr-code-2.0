@@ -19,7 +19,6 @@ body {
 }
 
 div {
-    width: 90%;
     margin: 20px auto;
 }
 
@@ -40,6 +39,14 @@ div {
     width: 250px;
 }
 
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border-radius: 5px;
+}
+
 .form-text-qr {
     color: #2E83F2;
     text-align: center;
@@ -51,7 +58,8 @@ div {
 }
 
 div > p {
-    color: black;
+    color: #68778d;
+    font-size: 13px;
 }
 
 
@@ -59,6 +67,10 @@ div > p {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+#imgcode {
+    display: block;
 }
 
 input {
